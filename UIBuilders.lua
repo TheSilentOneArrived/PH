@@ -1,6 +1,8 @@
 local UIBuilders = {}
 
-function UIBuilders.CreateScreenGui(playerGui)
+function UIBuilders.Build(playerGui)
+
+    local UI = {}
 
     local screenGui = Instance.new("ScreenGui")
     screenGui.Name = "VerticalMenu"
@@ -8,22 +10,10 @@ function UIBuilders.CreateScreenGui(playerGui)
     screenGui.DisplayOrder = 999
     screenGui.Parent = playerGui
 
-    return screenGui
+    UI.screenGui = screenGui
+
+    return UI
 
 end
-
-function UIBuilders.CreateIgnoreWindow()
-
-end
-
-function UIBuilders.CreateMainWindow()
-
-end
-
-function UIBuilders.CreateSettingsUI()
-
-end
-
-print("✅ UIBuilders loaded")
 
 return UIBuilders
